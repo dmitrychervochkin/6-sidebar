@@ -1,0 +1,97 @@
+.sidebar {
+    background-color: white;
+    height: 100vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 0 5px #8d91a020;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.4s;
+
+    &__header {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        border-bottom: 1px solid #f6f6f7;
+
+        &--top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & .toggle-nav-btn {
+                padding: 6px;
+                box-sizing: content-box;
+                border-radius: 6px;
+                position: relative;
+
+                &:hover {
+                    background-color: #f6f8fa;
+                    cursor: pointer;
+
+                    & ~ .tooltip-nav {
+                        opacity: 1;
+                    }
+                }
+            }
+            & .tooltip-nav {
+                transition: opacity 0.2s;
+                opacity: 0;
+                padding: 12px 20px;
+                border-radius: 6px;
+                right: -160px;
+                position: absolute;
+                color: white;
+                background-color: #212121;
+                z-index: 2;
+
+                &::before {
+                    z-index: -1;
+                    position: absolute;
+                    left: -3px;
+                    top: 7px;
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    background-color: #212121;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+
+    &__main,
+    &__footer {
+        overflow: hidden;
+        color: #8b8d9a;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 15px;
+        gap: 15px;
+    }
+
+    &__footer {
+        border-top: 1px solid #f6f6f7;
+        padding: 20px 0 40px 0;
+        margin-top: auto;
+        justify-self: end;
+        overflow: hidden;
+
+        &--user {
+            overflow: hidden;
+            background-color: #f6f8fa;
+            padding: 30px 20px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+
+            & p {
+                flex: 1;
+                justify-self: stretch;
+            }
+        }
+    }
+}

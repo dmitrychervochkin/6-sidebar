@@ -1,0 +1,14 @@
+.app {
+    position: relative;
+    height: 100vh;
+
+    &__page {
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        font-size: 25px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,59 @@
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+
+    & .nav-menu {
+        width: 100%;
+
+        &__point {
+            transition: background-color 0.3s, color 0.3s, padding 0.2s;
+            padding: 10px 5px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            width: 100%;
+
+            & p {
+                flex: 1;
+                justify-self: stretch;
+            }
+
+            &:hover {
+                background-color: #f6f8fa;
+                padding: 10px 5px 10px 10px;
+                cursor: pointer;
+                color: black;
+            }
+        }
+        &__sub-points-container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px;
+            gap: 5px;
+            font-size: 18px;
+            overflow: hidden;
+        }
+        &__sub-point {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px 15px;
+            border-radius: 6px;
+            transition: background-color 0.3s, color 0.3s, padding 0.2s;
+
+            &--color {
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+            }
+            &:hover {
+                padding: 10px 20px;
+                background-color: #f6f8fa;
+                cursor: pointer;
+                color: black;
+            }
+        }
+    }
+}

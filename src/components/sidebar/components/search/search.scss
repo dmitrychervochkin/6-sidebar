@@ -1,0 +1,22 @@
+.search {
+    width: 100%;
+    background-color: #f6f8fa;
+    border-radius: 6px;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__icon {
+        color: #86879C;
+        
+    }
+    &__input {
+        font-size: 15px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 100%;
+        color: #898fa3;
+    }
+}
